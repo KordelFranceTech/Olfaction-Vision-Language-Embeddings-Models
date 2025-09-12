@@ -13,10 +13,10 @@
 
 ## Description
 
-This repository is a series of multimodal machine learning models trained on olfaction, vision, and language data specifically for tasks in robotics and embodied artificial intelligence.
+This repository is the first-ever series of multimodal machine learning models trained on olfaction, vision, and language data specifically for tasks in robotics and embodied artificial intelligence.
 
 
-To the best of our knowledge, there are currently no open-source datasets that provide aligned olfactory, visual, and linguistic annotations. 
+To the best of our knowledge, there are currently no open-source datasets that provide aligned olfactory, visual, and linguistic annotations, making this the first.
 A “true” multimodal evaluation would require measuring the chemical composition of scenes (e.g., using gas chromatography mass spectrometry) while simultaneously capturing images and collecting perceptual descriptors from human olfactory judges. 
 Such a benchmark would demand substantial new data collection efforts and instrumentation.
 Consequently, we evaluate our models indirectly, using surrogate metrics (e.g., cross-modal retrieval performance, odor descriptor classification accuracy, clustering quality). 
