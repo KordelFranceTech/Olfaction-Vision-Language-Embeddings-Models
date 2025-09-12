@@ -1,0 +1,4 @@
+rdkit==2024.9.6
+torch-geometric==2.6.1
+torch
+bleak
