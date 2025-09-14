@@ -10,7 +10,7 @@
   - **Vision encoder:** CLIP-based
   - **Language encoder:** CLIP-based
   - **Fusion strategy:** Joint embedding space via multimodal contrastive training
-  - **Parameter Count:** 2M
+  - **Parameter Count:** 2.2M (without CLIP), 153.5M (with CLIP)
 - **License:** MIT
 - **Contact:** kordel@scentience.ai
 

@@ -1,0 +1,4 @@
+AROMA_VEC_LENGTH: int = 138
+IMG_DIM: int = 224
+BATCH_SIZE: int = 16
+EMBED_DIM: int = 512

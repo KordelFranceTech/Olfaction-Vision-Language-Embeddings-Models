@@ -1,3 +1,24 @@
+---
+language: 
+  - en
+tags:
+- embeddings
+- multimodal
+- olfaction-vision-language
+- olfaction
+- olfactory
+- scentience
+- vision-language
+- vision
+- language
+- robotics
+license: mit
+datasets:
+- kordelfrance/olfaction-vision-language-dataset
+- detection-datasets/coco
+base_model: Scentience-OVL-Embeddings-Base
+---
+
 # Olfaction-Vision-Language Embeddings
 (In work)
 
@@ -41,6 +62,7 @@ Olfaction-Vision-Language-Embeddings-Models/
 ├── model/                    # Embeddings models
 ├── model_cards/              # Specifications for each embedding model
 ├── notebooks/                # Notebooks for loading the models for inference
+├── src/                      # Source code for inference, model loading, utils
 └── README.md                 # Overview of repository contributions and usage
 ```
 
