@@ -32,6 +32,8 @@
 - **Vision data:** COCO dataset.
 - **Language data:** Smell descriptors and text annotations curated from literature.
 
+For more information on how the training data was accumulated, please see the [HuggingFace dataset URL here](https://huggingface.co/datasets/kordelfrance/olfaction-vision-language-dataset)
+
 ---
 
 ## Evaluation
