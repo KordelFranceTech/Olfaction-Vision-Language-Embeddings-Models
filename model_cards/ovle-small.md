@@ -12,7 +12,7 @@
   - **Fusion strategy:** Joint embedding space via multimodal contrastive training
   - **Parameter Count:** 2.2M (without CLIP), 153.5M (with CLIP)
 - **License:** MIT
-- **Contact:** kordel@scentience.ai
+- **Contact:** kordel@scentience.ai, kordel.france@utdallas.edu
 
 ---
 
