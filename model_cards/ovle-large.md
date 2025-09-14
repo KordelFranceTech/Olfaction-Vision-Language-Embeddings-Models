@@ -72,11 +72,35 @@ As a result, we release this model to catalyze further research and encourage th
 ## Citation
 If you use this model, please cite:
 ```
-    @misc{scentience2025ovle,
-    title = {Scentience-OVLE-Large-v1: Joint Olfaction-Vision-Language Embeddings},
-    author = {Kordel Kade France},
-    year = {2025},
-    howpublished = {Hugging Face},
-    url = {https://huggingface.co/your-username/Scentience-OVLE-Large-v1}
+    @misc{france2025ovlembeddings,
+        title = {Scentience-OVLE-Base-v1: Joint Olfaction-Vision-Language Embeddings},
+        author = {Kordel Kade France},
+        year = {2025},
+        howpublished = {Hugging Face},
+        url = {https://huggingface.co/kordelfrance/Olfaction-Vision-Language-Embeddings}
     }
+```
+
+```
+    @misc{radford2021clip,
+        title        = {Learning Transferable Visual Models From Natural Language Supervision},
+        author       = {Alec Radford and Jong Wook Kim and Chris Hallacy and Aditya Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
+        year         = 2021,
+        url          = {https://arxiv.org/abs/2103.00020},
+        eprint       = {2103.00020},
+        archiveprefix = {arXiv},
+        primaryclass = {cs.CV}
+    }
+```
+
+```
+    @misc{zhai2023siglip,
+          title={Sigmoid Loss for Language Image Pre-Training}, 
+          author={Xiaohua Zhai and Basil Mustafa and Alexander Kolesnikov and Lucas Beyer},
+          year={2023},
+          eprint={2303.15343},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV},
+          url={https://arxiv.org/abs/2303.15343}, 
+}
 ```
