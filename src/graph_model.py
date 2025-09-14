@@ -27,7 +27,7 @@ def run_inference(vision_lang_encoder, olf_encoder, graph_model, image, olf_vec)
     return embeds_final
 
 
-def load_model()
+def load_model():
     # Use CLIP as default baseline
     clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").to(constants.DEVICE)
     clip_model.eval()
