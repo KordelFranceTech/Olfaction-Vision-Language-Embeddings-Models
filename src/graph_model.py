@@ -1,7 +1,6 @@
 import torch
 from torchvision import transforms
-from transformers import CLIPProcessor, CLIPModel, AutoTokenizer, AutoModel, GPT2Tokenizer, GPT2LMHeadModel
-from PIL import Image
+from transformers import CLIPModel, SiglipModel
 
 from src import constants
 
@@ -28,22 +27,22 @@ def run_inference(vision_lang_encoder, olf_encoder, graph_model, image, olf_vec)
     return embeds_final
 
 
-if __name__ == "__main__":
+def load_model()
+    # Use CLIP as default baseline
     clip_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").to(constants.DEVICE)
-    clip_model.eval()  # Enable fine-tuning
+    clip_model.eval()
+    """
+    Or, you can also use SigLIP:
+        SiglipModel.from_pretrained(
+            "google/siglip-so400m-patch14-384",
+            attn_implementation="flash_attention_2",
+            dtype=torch.float16,
+            device_map=constants.DEVICE,
+        )
+    """
     olf_encoder = torch.load(constants.ENCODER_SMALL_BASE_PATH, weights_only=False).to(constants.DEVICE)
     olf_encoder.eval()
     graph_model = torch.load(constants.OVLE_SMALL_BASE_PATH, weights_only=False).to(constants.DEVICE)
     graph_model.eval()
 
-    example_image = Image.new('RGB', (constants.IMG_DIM, constants.IMG_DIM))
-    example_image.save(f"/tmp/image_example.jpg")
-    example_olf_vec = torch.randn(constants.AROMA_VEC_LENGTH)
-    ovl_embeddings = run_inference(
-        clip_model,
-        olf_encoder,
-        graph_model,
-        example_image,
-        example_olf_vec
-    )
-    print(f"Olfaction-Vision-Language Embeddings: {ovl_embeddings}")
+    return clip_model, olf_encoder, graph_model
