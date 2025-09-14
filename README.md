@@ -49,7 +49,7 @@ As a result, we release this model to catalyze further research and encourage th
 ## Models
 We offer four embedding models with this repository:
  - (1) `ovle-large-base`: The original OVL base model. This model is optimal for online tasks where accuracy is paramount.
- - (2) `ovle-large-graph`: The OVL base model built around a graph-attention network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
+ - (2) `ovle-large-graph`: The OVL base model built around a graph-attention-convolution network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
  - (3) `ovle-small-base`: The original OVL base model optimized for faster inference and edge-based robotics. This model is optimized for export to common frameworks that run on Android, iOS, Rust, and others.
  - (4) `ovle-small-graph`: The OVL graph model optimized for faster inference and edge robotics applications.
 
@@ -76,6 +76,6 @@ If you use any of these models, please cite:
     author = {Kordel Kade France},
     year = {2025},
     howpublished = {Hugging Face},
-    url = {https://huggingface.co/your-username/Scentience-OVLE-Large-v1}
+    url = {https://huggingface.co/kordelfrance/Olfaction-Vision-Language-Embeddings}
 }
 ```
