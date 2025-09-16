@@ -8,10 +8,15 @@ tags:
 - olfaction
 - olfactory
 - scentience
+- neural-network
+- graph-neural-network
+- gnn
 - vision-language
 - vision
 - language
 - robotics
+- multimodal
+- smell
 license: mit
 datasets:
 - kordelfrance/olfaction-vision-language-dataset
