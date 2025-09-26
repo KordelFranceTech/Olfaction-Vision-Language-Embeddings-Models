@@ -38,7 +38,7 @@ base_model: Scentience-OVL-Embeddings-Base
 
 ## Description
 
-This repository is the first-ever series of multimodal machine learning models trained on olfaction, vision, and language data specifically for tasks in robotics and embodied artificial intelligence.
+This repository is the first-ever series of multimodal joint embedding models trained on olfaction, vision, and language data specifically for tasks in robotics and embodied artificial intelligence.
 
 
 To the best of our knowledge, there are currently no open-source datasets that provide aligned olfactory, visual, and linguistic annotations, making this the first.
@@ -84,6 +84,20 @@ If you use any of these models, please cite:
     }
 ```
 
+```
+    @misc{france2025olfactionstandards,
+          title={Position: Olfaction Standardization is Essential for the Advancement of Embodied Artificial Intelligence}, 
+          author={Kordel K. France and Rohith Peddi and Nik Dennler and Ovidiu Daescu},
+          year={2025},
+          eprint={2506.00398},
+          archivePrefix={arXiv},
+          primaryClass={cs.AI},
+          url={https://arxiv.org/abs/2506.00398}, 
+    }
+```
+
+
+If you leverage the CLIP or SigLIP models, please cite:
 ```
     @misc{radford2021clip,
         title        = {Learning Transferable Visual Models From Natural Language Supervision},
