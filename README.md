@@ -47,21 +47,27 @@ Such a benchmark would demand substantial new data collection efforts and instru
 Consequently, we evaluate our models indirectly, using surrogate metrics (e.g., cross-modal retrieval performance, odor descriptor classification accuracy, clustering quality). 
 While these evaluations do not provide ground-truth verification of odor presence in images, they offer a first step toward demonstrating alignment between modalities.
 We draw analogy from past successes in ML datasets such as precursors to CLIP that lacked large paired datasets and were evaluated on retrieval-like tasks.
-As a result, we release this model to catalyze further research and encourage the community to contribute to building standardized datasets and evaluation protocols for olfaction-vision-language learning.
+Just as CLIP used contrastive objectives to construct vision-language relationships, we borrow similar principles to strengthen olfaction-vision-language weights. 
+Humans interpret smell with lingual descriptors such as "fruity" and "musky", allowing language to act as a bridge between olfaction and vision data.
 
+Whether these models are used for better vision-scent navigation with drones, triangulating the source of an odor in an image, extracting aromas from a scene, or augmenting a VR experience with scent, we hope their release will catalyze further research and encourage the community to contribute to building standardized datasets and evaluation protocols for olfaction-vision-language learning.
 
 ## Models
-We offer four embedding models with this repository:
- - (1) `ovle-large-base`: The original OVL base model. This model is optimal for online tasks where accuracy is paramount.
+We offer four olfaction-vision-language (OVL) embedding models with this repository:
+ - (1) `ovle-large-base`: The original OVL base model. This model is optimal for online tasks where accuracy is critical.
  - (2) `ovle-large-graph`: The OVL base model built around a graph-attention-convolution network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
  - (3) `ovle-small-base`: The original OVL base model optimized for faster inference and edge-based robotics. This model is optimized for export to common frameworks that run on Android, iOS, Rust, and others.
- - (4) `ovle-small-graph`: The OVL graph model optimized for faster inference and edge robotics applications.
+ - (4) `ovle-small-graph`: The OVL graph-attention-convolution model optimized for faster inference and edge robotics applications.
+
+## Training Data
+A sample dataset is included, but the full datasets are linked in the `Datasets` pane of this repo.
+Training code for replicating full construction of all models will be released soon.
 
 ## Directory Structure
 
 ```text
 Olfaction-Vision-Language-Embeddings-Models/
-├── data/                     # Training datasets
+├── data/                     # Sample training dataset
 ├── requirements.txt          # Python dependencies
 ├── model/                    # Embeddings models
 ├── model_cards/              # Specifications for each embedding model

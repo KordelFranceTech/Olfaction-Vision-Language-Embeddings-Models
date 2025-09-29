@@ -43,9 +43,9 @@ def load_model():
             device_map=constants.DEVICE,
         )
     """
-    olf_encoder = torch.load(constants.ENCODER_SMALL_GRAPH_PATH, weights_only=False).to(constants.DEVICE)
+    olf_encoder = torch.jit.load(constants.ENCODER_SMALL_GRAPH_PATH).to(constants.DEVICE)
     olf_encoder.eval()
-    graph_model = torch.load(constants.OVLE_SMALL_GRAPH_PATH, weights_only=False).to(constants.DEVICE)
+    graph_model = torch.jit.load(constants.OVLE_SMALL_GRAPH_PATH).to(constants.DEVICE)
     graph_model.eval()
 
     return clip_model, olf_encoder, graph_model
