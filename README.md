@@ -21,6 +21,7 @@ license: mit
 datasets:
 - kordelfrance/olfaction-vision-language-dataset
 - detection-datasets/coco
+- seyonec/goodscents_leffingwell
 base_model: Scentience-OVL-Embeddings-Base
 ---
 
@@ -40,18 +41,10 @@ base_model: Scentience-OVL-Embeddings-Base
 
 This repository is a foundational series of multimodal joint embedding models trained on olfaction, vision, and language data.
 These models are built specifically for prototyping and exploratory tasks within AR/VR, robotics, and embodied artificial intelligence.
+Analogous to how CLIP and SigLIP embeddings give vision-language relationships, our embeddings models here give olfaction-vision-language (OVL) relationships.
 
-
-To the best of our knowledge, there are currently no open-source datasets that provide aligned olfactory, visual, and linguistic annotations, making this the first.
-A “true” multimodal evaluation would require measuring the chemical composition of scenes (e.g., using gas chromatography mass spectrometry) while simultaneously capturing images and collecting perceptual descriptors from human olfactory judges. 
-Such a benchmark would demand substantial new data collection efforts and instrumentation.
-Consequently, we evaluate our models indirectly, using surrogate metrics (e.g., cross-modal retrieval performance, odor descriptor classification accuracy, clustering quality). 
-While these evaluations do not provide ground-truth verification of odor presence in images, they offer a first step toward demonstrating alignment between modalities.
-We draw analogy from past successes in ML datasets such as precursors to CLIP that lacked large paired datasets and were evaluated on retrieval-like tasks.
-Just as CLIP used contrastive objectives to construct vision-language relationships, we borrow similar principles to strengthen olfaction-vision-language weights. 
-Humans interpret smell with lingual descriptors such as "fruity" and "musky", allowing language to act as a bridge between olfaction and vision data.
-
-Whether these models are used for better vision-scent navigation with drones, triangulating the source of an odor in an image, extracting aromas from a scene, or augmenting a VR experience with scent, we hope their release will catalyze further research and encourage the community to contribute to building standardized datasets and evaluation protocols for olfaction-vision-language learning.
+Whether these models are used for better vision-scent navigation with drones, triangulating the source of an odor in an image, extracting aromas from a scene, or augmenting a VR experience with scent, we hope their release will catalyze further research in olfaction, especially olfactory robotics.
+We especially hope these models encourage the community to contribute to building standardized datasets and evaluation protocols for olfaction-vision-language learning.
 
 ## Models
 We offer four olfaction-vision-language (OVL) embedding models with this repository:
@@ -63,6 +56,17 @@ We offer four olfaction-vision-language (OVL) embedding models with this reposit
 ## Training Data
 A sample dataset is included, but the full datasets are linked in the `Datasets` pane of this repo.
 Training code for replicating full construction of all models will be released soon.
+
+
+To the best of our knowledge, there are currently no open-source datasets that provide jointly aligned olfactory, visual, and linguistic annotations.
+A “true” multimodal evaluation would require measuring the chemical composition of scenes (e.g., using gas-chromatography mass-spectrometry) while simultaneously capturing images and collecting perceptual descriptors from human olfactory judges. 
+Such a benchmark would demand substantial new data collection efforts and instrumentation.
+Consequently, we evaluate our models indirectly, using surrogate metrics (e.g., cross-modal retrieval performance, odor descriptor classification accuracy, clustering quality). 
+While these evaluations do not provide ground-truth verification of odor presence in images, they offer a first step toward demonstrating alignment between modalities and are perfect for exploratory research.
+We draw analogy from past successes in ML datasets, such as precursors to CLIP that lacked large data pairings and were evaluated on retrieval-like tasks.
+Just as CLIP used contrastive objectives to construct vision-language relationships, we borrow similar principles to strengthen olfaction-vision-language weights. 
+Humans interpret smell with lingual descriptors such as "fruity" and "musky", allowing language to act as a bridge between olfaction and vision data.
+
 
 ## Directory Structure
 
