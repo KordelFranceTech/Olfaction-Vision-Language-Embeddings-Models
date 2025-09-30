@@ -3,4 +3,5 @@
 *.DS_Store
 *data/
 *.pth
+*.pt
 *.safetensors

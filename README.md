@@ -38,7 +38,8 @@ base_model: Scentience-OVL-Embeddings-Base
 
 ## Description
 
-This repository is the first-ever series of multimodal joint embedding models trained on olfaction, vision, and language data specifically for tasks in robotics and embodied artificial intelligence.
+This repository is a foundational series of multimodal joint embedding models trained on olfaction, vision, and language data.
+These models are built specifically for prototyping and exploratory tasks within AR/VR, robotics, and embodied artificial intelligence.
 
 
 To the best of our knowledge, there are currently no open-source datasets that provide aligned olfactory, visual, and linguistic annotations, making this the first.
@@ -55,9 +56,9 @@ Whether these models are used for better vision-scent navigation with drones, tr
 ## Models
 We offer four olfaction-vision-language (OVL) embedding models with this repository:
  - (1) `ovle-large-base`: The original OVL base model. This model is optimal for online tasks where accuracy is critical.
- - (2) `ovle-large-graph`: The OVL base model built around a graph-attention-convolution network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
+ - (2) `ovle-large-gat`: The OVL base model built around a graph-attention-convolution network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
  - (3) `ovle-small-base`: The original OVL base model optimized for faster inference and edge-based robotics. This model is optimized for export to common frameworks that run on Android, iOS, Rust, and others.
- - (4) `ovle-small-graph`: The OVL graph-attention-convolution model optimized for faster inference and edge robotics applications.
+ - (4) `ovle-small-gat`: The OVL graph-attention-convolution model optimized for faster inference and edge robotics applications.
 
 ## Training Data
 A sample dataset is included, but the full datasets are linked in the `Datasets` pane of this repo.
