@@ -17,15 +17,17 @@ tags:
 - robotics
 - multimodal
 - smell
+- clip
 license: mit
 datasets:
 - kordelfrance/olfaction-vision-language-dataset
 - detection-datasets/coco
 - seyonec/goodscents_leffingwell
-base_model: Scentience-OVL-Embeddings-Base
+base_model: Scentience-COLIP-Base
 ---
 
-# Olfaction-Vision-Language Embeddings
+# COLIP: Contrastive Olfaction-Language-Image Pre-training
+## Olfaction-Vision-Language Embeddings
 
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
@@ -42,16 +44,17 @@ base_model: Scentience-OVL-Embeddings-Base
 This repository is a foundational series of multimodal joint embedding models trained on olfaction, vision, and language data.
 These models are built specifically for prototyping and exploratory tasks within AR/VR, robotics, and embodied artificial intelligence.
 Analogous to how CLIP and SigLIP embeddings give vision-language relationships, our embeddings models here give olfaction-vision-language (OVL) relationships.
+The models were built on top of CLIP and extended to olfaction.
 
 Whether these models are used for better vision-scent navigation with drones, triangulating the source of an odor in an image, extracting aromas from a scene, or augmenting a VR experience with scent, we hope their release will catalyze further research in olfaction, especially olfactory robotics.
 We especially hope these models encourage the community to contribute to building standardized datasets and evaluation protocols for olfaction-vision-language learning.
 
 ## Models
 We offer four olfaction-vision-language (OVL) embedding models with this repository:
- - (1) `ovle-large-base`: The original OVL base model. This model is optimal for online tasks where accuracy is critical.
- - (2) `ovle-large-gat`: The OVL base model built around a graph-attention-convolution network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
- - (3) `ovle-small-base`: The original OVL base model optimized for faster inference and edge-based robotics. This model is optimized for export to common frameworks that run on Android, iOS, Rust, and others.
- - (4) `ovle-small-gat`: The OVL graph-attention-convolution model optimized for faster inference and edge robotics applications.
+ - (1) `colip-large-base`: The original OVL base model. This model is optimal for online tasks where accuracy is critical.
+ - (2) `colip-large-gat`: The OVL base model built around a graph-attention network. This model is optimal for online tasks where accuracy is paramount and inference time is not as critical.
+ - (3) `colip-small-base`: The original OVL base model optimized for faster inference and edge-based robotics. This model is optimized for export to common frameworks that run on Android, iOS, Rust, and others.
+ - (4) `colip-small-gat`: The OVL graph-attention model optimized for faster inference and edge robotics applications.
 
 ## Training Data
 A sample dataset is included, but the full datasets are linked in the `Datasets` pane of this repo.
@@ -86,8 +89,8 @@ Olfaction-Vision-Language-Embeddings-Models/
 ## Citation
 If you use any of these models, please cite:
 ```
-    @misc{france2025ovlembeddings,
-        title = {Scentience-OVLE-Base-v1: Joint Olfaction-Vision-Language Embeddings},
+    @misc{france2025colip-ovlembeddings,
+        title = {Scentience-COLIP-v1: Joint Olfaction-Vision-Language Embeddings},
         author = {Kordel Kade France},
         year = {2025},
         howpublished = {Hugging Face},
@@ -108,7 +111,7 @@ If you use any of these models, please cite:
 ```
 
 
-If you leverage the CLIP or SigLIP models, please cite:
+With any use of COLIP, please also cite the original CLIP and SigLIP papers:
 ```
     @misc{radford2021clip,
         title        = {Learning Transferable Visual Models From Natural Language Supervision},

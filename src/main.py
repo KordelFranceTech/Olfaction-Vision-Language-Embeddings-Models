@@ -17,25 +17,25 @@ if __name__ == "__main__":
     # Load the base models
     vision_lang_encoder, olf_encoder, graph_model = bm.load_model()
     # Get embeddings from base models
-    ovl_embeddings_base = bm.run_inference(
+    colip_embeddings_base = bm.run_inference(
         vision_lang_encoder=vision_lang_encoder,
         olf_encoder=olf_encoder,
         graph_model=graph_model,
         image=example_image,
         olf_vec=example_olf_vec
     )
-    print(f"Olfaction-Vision-Language Embeddings from Base Model: {ovl_embeddings_base}")
+    print(f"COLIP Embeddings from Base Model: {colip_embeddings_base}")
 
     # -------- Option B --------
     # Load the graph attention models
     vision_lang_encoder, olf_encoder, graph_model = gm.load_model()
     # Get embeddings from graph attention models
-    ovl_embeddings_graph = gm.run_inference(
+    colip_embeddings_graph = gm.run_inference(
         vision_lang_encoder=vision_lang_encoder,
         olf_encoder=olf_encoder,
         graph_model=graph_model,
         image=example_image,
         olf_vec=example_olf_vec
     )
-    print(f"Olfaction-Vision-Language Embeddings from Graph Attention Model: {ovl_embeddings_graph}")
+    print(f"COLIP Embeddings from Graph Attention Model: {colip_embeddings_graph}")
 
