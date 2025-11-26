@@ -78,7 +78,7 @@ Humans interpret smell with lingual descriptors such as "fruity" and "musky", al
 Olfaction-Vision-Language-Embeddings-Models/
 ├── data/                     # Sample training dataset
 ├── requirements.txt          # Python dependencies
-├── model/                    # Embeddings models
+├── model/                    # COLIP embedding models
 ├── model_cards/              # Specifications for each embedding model
 ├── notebooks/                # Notebooks for replicating training and loading the models for inference
 ├── src/                      # Source code for inference, model loading, utils
