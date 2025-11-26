@@ -18,6 +18,7 @@ tags:
 - multimodal
 - smell
 - clip
+- siglip
 license: mit
 datasets:
 - kordelfrance/olfaction-vision-language-dataset
@@ -26,7 +27,7 @@ datasets:
 base_model: Scentience-COLIP-Base
 ---
 
-# COLIP: Contrastive Olfaction-Language-Image Pre-training
+# COLIP: Contrastive Olfaction-Language-Image Pre-training Model
 ## Olfaction-Vision-Language Embeddings
 
 
