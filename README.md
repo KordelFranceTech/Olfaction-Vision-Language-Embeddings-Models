@@ -79,7 +79,7 @@ Olfaction-Vision-Language-Embeddings-Models/
 ├── requirements.txt          # Python dependencies
 ├── model/                    # Embeddings models
 ├── model_cards/              # Specifications for each embedding model
-├── notebooks/                # Notebooks for loading the models for inference
+├── notebooks/                # Notebooks for replicating training and loading the models for inference
 ├── src/                      # Source code for inference, model loading, utils
 └── README.md                 # Overview of repository contributions and usage
 ```
